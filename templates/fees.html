@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Fees{% endblock %}
+
+{% block content %}
+
+<h2>Fee Management</h2>
+
+<form action="/add_fee" method="POST">
+
+<input type="text" name="enrollment_no" placeholder="Enrollment Number" required>
+
+<input type="number" name="total_fee" placeholder="Total Fee" required>
+
+<input type="number" name="paid_fee" placeholder="Paid Fee" required>
+
+<input type="number" name="balance_fee" placeholder="Balance Fee" required>
+
+<input type="date" name="payment_date" required>
+
+<select name="payment_mode">
+<option>Cash</option>
+<option>UPI</option>
+<option>Card</option>
+<option>Bank Transfer</option>
+</select>
+
+<button type="submit">Save Fee</button>
+
+</form>
+
+<table>
+
+<tr>
+<th>Enrollment</th>
+<th>Total</th>
+<th>Paid</th>
+<th>Balance</th>
+<th>Date</th>
+<th>Mode</th>
+</tr>
+
+{% for fee in fees %}
+
+<tr>
+<td>{{ fee.enrollment_no }}</td>
+<td>{{ fee.total_fee }}</td>
+<td>{{ fee.paid_fee }}</td>
+<td>{{ fee.balance_fee }}</td>
+<td>{{ fee.payment_date }}</td>
+<td>{{ fee.payment_mode }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

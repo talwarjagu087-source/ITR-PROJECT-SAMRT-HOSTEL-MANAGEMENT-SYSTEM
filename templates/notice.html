@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Notice Board{% endblock %}
+
+{% block content %}
+
+<h2>Notice Board</h2>
+
+<form action="/add_notice" method="POST">
+
+<input type="text" name="title" placeholder="Notice Title" required>
+
+<textarea name="description" placeholder="Write Notice Here" required></textarea>
+
+<input type="date" name="notice_date">
+
+<button type="submit">Publish Notice</button>
+
+</form>
+
+<table>
+
+<tr>
+<th>Title</th>
+<th>Description</th>
+<th>Date</th>
+</tr>
+
+{% for notice in notices %}
+
+<tr>
+
+<td>{{ notice.title }}</td>
+<td>{{ notice.description }}</td>
+<td>{{ notice.notice_date }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

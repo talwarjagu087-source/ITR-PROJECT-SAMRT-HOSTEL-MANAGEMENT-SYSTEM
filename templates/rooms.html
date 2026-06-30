@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Rooms{% endblock %}
+
+{% block content %}
+
+<h2>Room Management</h2>
+
+<form action="/add_room" method="POST">
+
+<input type="text" name="room_no" placeholder="Room Number" required>
+
+<select name="room_type">
+
+<option>Single</option>
+
+<option>Double</option>
+
+<option>Triple</option>
+
+</select>
+
+<input type="number" name="capacity" placeholder="Capacity">
+
+<select name="status">
+
+<option>Available</option>
+
+<option>Occupied</option>
+
+<option>Maintenance</option>
+
+</select>
+
+<button>Add Room</button>
+
+</form>
+
+<table>
+
+<tr>
+
+<th>Room No</th>
+
+<th>Type</th>
+
+<th>Capacity</th>
+
+<th>Occupied</th>
+
+<th>Status</th>
+
+</tr>
+
+{% for room in rooms %}
+
+<tr>
+
+<td>{{ room.room_no }}</td>
+
+<td>{{ room.room_type }}</td>
+
+<td>{{ room.capacity }}</td>
+
+<td>{{ room.occupied }}</td>
+
+<td>{{ room.status }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

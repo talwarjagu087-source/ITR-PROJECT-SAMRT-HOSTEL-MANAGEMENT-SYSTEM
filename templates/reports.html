@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+
+<h2>Reports</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Total Students</h3>
+
+<p>{{ total_students }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>Total Rooms</h3>
+
+<p>{{ total_rooms }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>Total Fees Collected</h3>
+
+<p>₹ {{ total_fees }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>Total Complaints</h3>
+
+<p>{{ total_complaints }}</p>
+
+</div>
+
+</div>
+
+{% endblock %}

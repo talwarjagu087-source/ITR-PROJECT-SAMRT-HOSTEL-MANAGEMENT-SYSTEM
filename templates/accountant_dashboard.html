@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Accountant Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+<h1>Accountant Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Fees</h2>
+<a href="/fees">Manage Fees</a>
+</div>
+
+<div class="card">
+<h2>Fee Receipt</h2>
+<a href="/fee_receipt">Generate Receipt</a>
+</div>
+
+<div class="card">
+<h2>Reports</h2>
+<a href="/reports">Financial Reports</a>
+</div>
+
+<div class="card">
+<h2>Students</h2>
+<a href="/students">Student List</a>
+</div>
+
+<div class="card">
+<h2>Profile</h2>
+<a href="/profile">Profile</a>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

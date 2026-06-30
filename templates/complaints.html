@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Complaints{% endblock %}
+
+{% block content %}
+
+<h2>Complaint Management</h2>
+
+<form action="/add_complaint" method="POST">
+
+<input type="text" name="enrollment_no" placeholder="Enrollment Number" required>
+
+<textarea name="complaint" placeholder="Complaint" required></textarea>
+
+<input type="date" name="complaint_date">
+
+<select name="status">
+
+<option>Pending</option>
+
+<option>Resolved</option>
+
+</select>
+
+<button type="submit">
+
+Submit Complaint
+
+</button>
+
+</form>
+
+<table>
+
+<tr>
+
+<th>Enrollment</th>
+
+<th>Complaint</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+</tr>
+
+{% for complaint in complaints %}
+
+<tr>
+
+<td>{{ complaint.enrollment_no }}</td>
+
+<td>{{ complaint.complaint }}</td>
+
+<td>{{ complaint.complaint_date }}</td>
+
+<td>{{ complaint.status }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

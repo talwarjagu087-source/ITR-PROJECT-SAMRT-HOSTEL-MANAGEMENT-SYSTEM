@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Attendance{% endblock %}
+
+{% block content %}
+
+<h2>Attendance</h2>
+
+<form action="/mark_attendance" method="POST">
+
+<input type="text"
+name="enrollment_no"
+placeholder="Enrollment Number"
+required>
+
+<input type="date"
+name="date"
+required>
+
+<select name="status">
+
+<option>Present</option>
+
+<option>Absent</option>
+
+<option>Leave</option>
+
+</select>
+
+<button>Save Attendance</button>
+
+</form>
+
+<table>
+
+<tr>
+
+<th>Enrollment</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+</tr>
+
+{% for attendance in attendance_list %}
+
+<tr>
+
+<td>{{ attendance.enrollment_no }}</td>
+
+<td>{{ attendance.date }}</td>
+
+<td>{{ attendance.status }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

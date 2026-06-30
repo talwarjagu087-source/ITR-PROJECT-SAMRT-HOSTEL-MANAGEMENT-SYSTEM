@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Fee Receipt{% endblock %}
+
+{% block content %}
+
+<h2>Fee Receipt</h2>
+
+<div class="receipt">
+
+<p><strong>Enrollment No:</strong> {{ fee.enrollment_no }}</p>
+
+<p><strong>Total Fee:</strong> ₹{{ fee.total_fee }}</p>
+
+<p><strong>Paid Fee:</strong> ₹{{ fee.paid_fee }}</p>
+
+<p><strong>Balance:</strong> ₹{{ fee.balance_fee }}</p>
+
+<p><strong>Payment Date:</strong> {{ fee.payment_date }}</p>
+
+<p><strong>Payment Mode:</strong> {{ fee.payment_mode }}</p>
+
+<button onclick="window.print()">
+
+Print Receipt
+
+</button>
+
+</div>
+
+{% endblock %}

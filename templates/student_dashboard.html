@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Student Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+<h1>Student Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>My Profile</h2>
+<a href="/profile">Open</a>
+</div>
+
+<div class="card">
+<h2>Attendance</h2>
+<a href="/attendance">View Attendance</a>
+</div>
+
+<div class="card">
+<h2>Fees</h2>
+<a href="/fees">Fee Details</a>
+</div>
+
+<div class="card">
+<h2>Complaints</h2>
+<a href="/complaints">Raise Complaint</a>
+</div>
+
+<div class="card">
+<h2>Notice Board</h2>
+<a href="/notice">View Notices</a>
+</div>
+
+<div class="card">
+<h2>ID Card</h2>
+<a href="/idcard">View ID Card</a>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

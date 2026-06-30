@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+<h1>Admin Dashboard</h1>
+<h1>WELCOME ADMIN </h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Students</h2>
+<a href="/students">Manage Students</a>
+</div>
+
+<div class="card">
+<h2>Rooms</h2>
+<a href="/rooms">Manage Rooms</a>
+</div>
+
+<div class="card">
+<h2>Attendance</h2>
+<a href="/attendance">View Attendance</a>
+</div>
+
+<div class="card">
+<h2>Fees</h2>
+<a href="/fees">Manage Fees</a>
+</div>
+
+<div class="card">
+<h2>Complaints</h2>
+<a href="/complaints">View Complaints</a>
+</div>
+
+<div class="card">
+<h2>Visitors</h2>
+<a href="/visitors">Visitor Register</a>
+</div>
+
+<div class="card">
+<h2>Reports</h2>
+<a href="/reports">Generate Reports</a>
+</div>
+
+<div class="card">
+<h2>Profile</h2>
+<a href="/profile">My Profile</a>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

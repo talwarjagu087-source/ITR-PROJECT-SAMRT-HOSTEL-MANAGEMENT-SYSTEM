@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Student ID Card{% endblock %}
+
+{% block content %}
+
+<div class="id-card">
+
+<h2>Hostel Identity Card</h2>
+
+<hr>
+
+<p><strong>Enrollment No :</strong> {{ student.enrollment_no }}</p>
+
+<p><strong>Name :</strong> {{ student.name }}</p>
+
+<p><strong>Course :</strong> {{ student.course }}</p>
+
+<p><strong>Room No :</strong> {{ student.room_no }}</p>
+
+<p><strong>Phone :</strong> {{ student.phone }}</p>
+
+<p><strong>Issue Date :</strong> {{ issue_date }}</p>
+
+<button onclick="window.print()">
+
+Print ID Card
+
+</button>
+
+</div>
+
+{% endblock %}

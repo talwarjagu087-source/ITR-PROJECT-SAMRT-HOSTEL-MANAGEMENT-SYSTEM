@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Room Allocation{% endblock %}
+
+{% block content %}
+
+<h2>Room Allocation</h2>
+
+<form action="/allocate_room" method="POST">
+
+<input type="text"
+name="enrollment_no"
+placeholder="Enrollment Number"
+required>
+
+<input type="text"
+name="room_no"
+placeholder="Room Number"
+required>
+
+<input type="date"
+name="allocation_date"
+required>
+
+<button>Allocate Room</button>
+
+</form>
+
+<table>
+
+<tr>
+
+<th>Enrollment</th>
+
+<th>Room</th>
+
+<th>Allocation Date</th>
+
+</tr>
+
+{% for room in allocations %}
+
+<tr>
+
+<td>{{ room.enrollment_no }}</td>
+
+<td>{{ room.room_no }}</td>
+
+<td>{{ room.allocation_date }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

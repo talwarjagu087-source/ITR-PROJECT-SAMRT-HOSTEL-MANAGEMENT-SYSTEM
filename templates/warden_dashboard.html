@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Warden Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+<h1>Warden Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Students</h2>
+<a href="/students">Students</a>
+</div>
+
+<div class="card">
+<h2>Room Allocation</h2>
+<a href="/room_allocation">Allocate Rooms</a>
+</div>
+
+<div class="card">
+<h2>Attendance</h2>
+<a href="/attendance">Attendance</a>
+</div>
+
+<div class="card">
+<h2>Complaints</h2>
+<a href="/complaints">Complaints</a>
+</div>
+
+<div class="card">
+<h2>Visitors</h2>
+<a href="/visitors">Visitors</a>
+</div>
+
+<div class="card">
+<h2>Notice Board</h2>
+<a href="/notice">Notices</a>
+</div>
+
+<div class="card">
+<h2>Profile</h2>
+<a href="/profile">Profile</a>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
